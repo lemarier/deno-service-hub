@@ -5,7 +5,7 @@ A semantically versioned provider/consumer system for global application service
 [![Test CI](https://github.com/lemarier/deno-service-hub/workflows/Test%20CI/badge.svg)](https://github.com//lemarier/deno-service-hub/actions)
 
 ```ts
-import ServiceHub from "./mod.ts";
+import ServiceHub from "https://deno.land/x/service_hub/mod.ts";
 
 const serviceHub = new ServiceHub();
 
