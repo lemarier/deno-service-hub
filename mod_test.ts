@@ -5,13 +5,11 @@ Deno.test("test with different version range", () => {
   const hub = new ServiceHub();
   let totalProcessed: number = 0;
 
-  const test1 = hub.provide("run-test", "4.1.0", {
+  hub.provide("run-test", "4.1.0", {
     runTest: () => {
       totalProcessed++;
     },
   });
-
-  console.log(test1.dispose());
 
   hub.provide("run-test", "1.0.1", {
     runTest: () => {
@@ -21,7 +19,7 @@ Deno.test("test with different version range", () => {
 
   hub.consume(
     "run-test",
-    ">1.0.0 <4.1.0",
+    ">=4.0.0",
     (consumer: { runTest: Function }) => {
       consumer.runTest();
     },
