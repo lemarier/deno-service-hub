@@ -1,6 +1,6 @@
 # service-hub
 
-A semantically versioned provider/consumer system for global application services for Deno
+A semantically versioned provider/consumer system for global application services for Deno.
 
 [![Test CI](https://github.com/lemarier/deno-service-hub/workflows/Test%20CI/badge.svg)](https://github.com//lemarier/deno-service-hub/actions)
 
